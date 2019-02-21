@@ -94,6 +94,6 @@ class ProductsController extends Controller
     {
       $product = Product::find($id);
       $product->delete();
-      return redirect('api/products');
+      return Product::all();
     }
 }

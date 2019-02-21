@@ -18,5 +18,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::group(['middleware' => ['api']], function(){
   Route::resource('products', 'Api\ProductsController', [
-    'only' => ['index','show', 'store', 'update']]);
+    'only' => ['index','show', 'store', 'update','destroy']]);
 });
