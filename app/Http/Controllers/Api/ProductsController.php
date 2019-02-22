@@ -35,7 +35,7 @@ class ProductsController extends Controller
 
         ]);
         if ($validator->fails()) {
-            return response()->json(['文字数が多すぎます'],400);
+            return response()->json(['文字数が多すぎます。'],400);
         }
         $product = new Product;
         $product->title = $request->title;
